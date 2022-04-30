@@ -1,0 +1,337 @@
+@-webkit-keyframes actionsShowing {
+    0% {
+        opacity  : 0;
+        transform: translateY(-15px)
+    }
+
+    to {
+        opacity  : 1;
+        transform: translateY(0)
+    }
+}
+
+@keyframes actionsShowing {
+    0% {
+        opacity  : 0;
+        transform: translateY(-15px)
+    }
+
+    to {
+        opacity  : 1;
+        transform: translateY(0)
+    }
+}
+
+@-webkit-keyframes loginShowing {
+    0% {
+        transform: scale(0)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
+
+@keyframes loginShowing {
+    0% {
+        transform: scale(0)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
+
+@-webkit-keyframes linksShowing {
+    0% {
+        opacity  : 0;
+        transform: translateY(-10px)
+    }
+
+    to {
+        opacity  : 1;
+        transform: translateY(0)
+    }
+}
+
+@keyframes linksShowing {
+    0% {
+        opacity  : 0;
+        transform: translateY(-10px)
+    }
+
+    to {
+        opacity  : 1;
+        transform: translateY(0)
+    }
+}
+
+@-webkit-keyframes headerCityShowing {
+    0% {
+        opacity  : 0;
+        transform: translate(-50%, -15px)
+    }
+
+    to {
+        opacity  : 1;
+        transform: translate(-50%)
+    }
+}
+
+@keyframes headerCityShowing {
+    0% {
+        opacity  : 0;
+        transform: translate(-50%, -15px)
+    }
+
+    to {
+        opacity  : 1;
+        transform: translate(-50%)
+    }
+}
+
+@-webkit-keyframes menuShow {
+    0% {
+        background-color: transparent
+    }
+
+    to {
+        background-color: rgba(0, 0, 0, .5)
+    }
+}
+
+@keyframes menuShow {
+    0% {
+        background-color: transparent
+    }
+
+    to {
+        background-color: rgba(0, 0, 0, .5)
+    }
+}
+
+@-webkit-keyframes menuCloseButton {
+    0% {
+        transform: translateY(0)
+    }
+
+    to {
+        transform: translateY(265px)
+    }
+}
+
+@keyframes menuCloseButton {
+    0% {
+        transform: translateY(0)
+    }
+
+    to {
+        transform: translateY(265px)
+    }
+}
+
+@-webkit-keyframes menuContentShow {
+    0% {
+        transform: translateY(-100%)
+    }
+
+    to {
+        transform: translateY(0)
+    }
+}
+
+@keyframes menuContentShow {
+    0% {
+        transform: translateY(-100%)
+    }
+
+    to {
+        transform: translateY(0)
+    }
+}
+
+@media (max-width:767px) {
+    @-webkit-keyframes actionsShowing {
+        0% {
+            transform: scale(0)
+        }
+
+        to {
+            transform: scale(1)
+        }
+    }
+
+    @keyframes actionsShowing {
+        0% {
+            transform: scale(0)
+        }
+
+        to {
+            transform: scale(1)
+        }
+    }
+
+    @-webkit-keyframes loginShowing {
+        0% {
+            transform: scale(0)
+        }
+
+        to {
+            transform: scale(1)
+        }
+    }
+
+    @keyframes loginShowing {
+        0% {
+            transform: scale(0)
+        }
+
+        to {
+            transform: scale(1)
+        }
+    }
+}
+
+@-webkit-keyframes modalShow {
+    0% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes modalShow {
+    0% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes modalContentShow {
+    0% {
+        transform: scale(0)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
+
+@keyframes modalContentShow {
+    0% {
+        transform: scale(0)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
+
+@-webkit-keyframes modalRemoveItem {
+    0% {
+        left   : 30px;
+        opacity: 0
+    }
+
+    to {
+        left   : 40px;
+        opacity: 1
+    }
+}
+
+@keyframes modalRemoveItem {
+    0% {
+        left   : 30px;
+        opacity: 0
+    }
+
+    to {
+        left   : 40px;
+        opacity: 1
+    }
+}
+
+@media (max-width:767px) {
+    @-webkit-keyframes modalRemoveItem {
+        0% {
+            left   : -5%;
+            opacity: 0
+        }
+
+        to {
+            left   : 0;
+            opacity: 1
+        }
+    }
+
+    @keyframes modalRemoveItem {
+        0% {
+            left   : -5%;
+            opacity: 0
+        }
+
+        to {
+            left   : 0;
+            opacity: 1
+        }
+    }
+}
+
+@-webkit-keyframes preloaderAnimation {
+    0% {
+        left : -200px;
+        width: 30%
+    }
+
+    50% {
+        width: 30%
+    }
+
+    70% {
+        width: 70%
+    }
+
+    80% {
+        left: 50%
+    }
+
+    95% {
+        left: 120%
+    }
+
+    to {
+        left: 100%
+    }
+}
+
+@keyframes preloaderAnimation {
+    0% {
+        left : -200px;
+        width: 30%
+    }
+
+    50% {
+        width: 30%
+    }
+
+    70% {
+        width: 70%
+    }
+
+    80% {
+        left: 50%
+    }
+
+    95% {
+        left: 120%
+    }
+
+    to {
+        left: 100%
+    }
+}

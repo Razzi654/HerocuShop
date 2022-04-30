@@ -1,0 +1,93 @@
+html {
+    box-sizing: border-box;
+    font-size : 16px;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+#myCarousel .banner-title {
+    color: #f2f6fb;
+    background-color: #000000ba;
+    padding: 0.75rem;
+}
+
+section {
+    padding         : 6rem 0;
+    background-color: #f2f6fb;
+}
+
+/* Carousel base class */
+.carousel {
+    margin-top: 7.6rem;
+}
+
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+    bottom : 3rem;
+    z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel-item {
+    height: 32rem;
+}
+
+.carousel-item .banner {
+    position : absolute;
+    top      : 0;
+    left     : 0;
+    min-width: 100%;
+    height   : 32rem;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-item-next, .carousel-item-prev, .carousel-item.active {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-section {
+    margin-bottom: 6rem;
+}
+
+.product-section .section-title {
+    text-align: left;
+    font-size : 1.5rem;
+    margin    : 1.3rem 0;
+}
+
+.product-card {
+    transition: box-shadow .5s ease;
+}
+
+.product-card .product-title {
+    text-align: center;
+    font-size : 0.9rem;
+}
+
+.product-card .product-price {
+    color    : #000;
+    font-size: 1.5rem;
+    padding: 1rem 0;
+}
+
+.product-card .is-available {
+    font-size: 0.8rem;
+}
+
+.product-title {
+    height: 3.5rem;
+    overflow: hidden;
+    line-height: 1.5;
+    font-weight: normal;
+}

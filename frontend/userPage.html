@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+
+    <link href="/common/static/utils/vendor/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="/common/static/utils/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/auth/css/util.css">
+    <link rel="stylesheet" href="/auth/css/main.css">
+
+    <link rel="stylesheet" href="/common/static/css/animations.css">
+    <link rel="stylesheet" href="/common/static/css/style.css">
+    <link rel="stylesheet" href="/common/static/css/header.css">
+    <link rel="stylesheet" href="css/sidebar_style.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <title>Особистий кабінет</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+            <div class="container">
+                <div class="header-layout w-100 flex-col-c-m align-content-center">
+                    <div class="top-layout w-100 flex-row flex-sb-m">
+                        <a class="header-logo" href="/">
+                            <picture>
+                                <source media="(min-width: 768px)" type="image/svg+xml"
+                                    srcset="/common/static/img/sample-logo.svg">
+                                <source media="(min-width: 200px)" type="image/svg+xml"
+                                    srcset="/common/static/img/sample-logo-light.svg">
+                                <img class="header-logo-img" height="45" src="/common/static/img/sample-logo.svg"
+                                    alt="Logo" loading="lazy">
+                            </picture>
+                        </a>
+
+                        <div class="simple-contact-info">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link contacts" href="#">Контакти</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link about-us" href="#">Про нас</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- /.top-layout -->
+
+                    <hr class="header-division">
+
+                    <div class="bottom-layout w-100 flex-row flex-sb-m">
+                        <div class="bottom-layout w-100">
+                            <div class="flex-row flex-sb-m">
+                                <div class="">
+                                    <div class="fat-menu-container">
+                                        <button class="fat-menu-btn flex-row flex-c-m bth btn-secondary">
+                                            <svg id="grid" class="me-lg-1" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z" />
+                                            </svg>
+                                            <span class="d-none d-lg-block">Каталог</span>
+                                        </button>
+                                    </div>
+                                    <!-- /.fat-menu-container -->
+                                </div>
+                                <!-- /.col -->
+
+                                <form class="search-area w-100 flex-row flex-c-m">
+                                    <input class="search-field form-control" type="search" placeholder="Поиск..."
+                                        aria-label="Search">
+                                    <button class="search-btn btn btn-success" type="submit">
+                                        <i class="fa fa-search" aria-hidden="true"></i>
+                                    </button>
+                                </form>
+                                <!-- /.col -->
+
+                                <div class="navbar" id="navbarCollapse">
+                                    <ul class="navbar-nav flex-row me-auto mb-2 mb-md-0">
+                                        <li class="nav-item account-item">
+                                            <a class="nav-link account-link" href="#">
+                                                <svg class="svg-header-icon account-icon" viewBox="0 0 20 20">
+                                                    <path fill="none"
+                                                        d="M10,10.9c2.373,0,4.303-1.932,4.303-4.306c0-2.372-1.93-4.302-4.303-4.302S5.696,4.223,5.696,6.594C5.696,8.969,7.627,10.9,10,10.9z M10,3.331c1.801,0,3.266,1.463,3.266,3.263c0,1.802-1.465,3.267-3.266,3.267c-1.8,0-3.265-1.465-3.265-3.267C6.735,4.794,8.2,3.331,10,3.331z">
+                                                    </path>
+                                                    <path fill="none"
+                                                        d="M10,12.503c-4.418,0-7.878,2.058-7.878,4.685c0,0.288,0.231,0.52,0.52,0.52c0.287,0,0.519-0.231,0.519-0.52c0-1.976,3.132-3.646,6.84-3.646c3.707,0,6.838,1.671,6.838,3.646c0,0.288,0.234,0.52,0.521,0.52s0.52-0.231,0.52-0.52C17.879,14.561,14.418,12.503,10,12.503z">
+                                                    </path>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item shopping-cart-item">
+                                            <a class="nav-link shopping-cart-link" href="#">
+                                                <svg class="svg-header-icon shopping-cart-icon" viewBox="0 0 20 20">
+                                                    <path fill="none"
+                                                        d="M17.72,5.011H8.026c-0.271,0-0.49,0.219-0.49,0.489c0,0.271,0.219,0.489,0.49,0.489h8.962l-1.979,4.773H6.763L4.935,5.343C4.926,5.316,4.897,5.309,4.884,5.286c-0.011-0.024,0-0.051-0.017-0.074C4.833,5.166,4.025,4.081,2.33,3.908C2.068,3.883,1.822,4.075,1.795,4.344C1.767,4.612,1.962,4.853,2.231,4.88c1.143,0.118,1.703,0.738,1.808,0.866l1.91,5.661c0.066,0.199,0.252,0.333,0.463,0.333h8.924c0.116,0,0.22-0.053,0.308-0.128c0.027-0.023,0.042-0.048,0.063-0.076c0.026-0.034,0.063-0.058,0.08-0.099l2.384-5.75c0.062-0.151,0.046-0.323-0.045-0.458C18.036,5.092,17.883,5.011,17.72,5.011z">
+                                                    </path>
+                                                    <path fill="none"
+                                                        d="M8.251,12.386c-1.023,0-1.856,0.834-1.856,1.856s0.833,1.853,1.856,1.853c1.021,0,1.853-0.83,1.853-1.853S9.273,12.386,8.251,12.386z M8.251,15.116c-0.484,0-0.877-0.393-0.877-0.874c0-0.484,0.394-0.878,0.877-0.878c0.482,0,0.875,0.394,0.875,0.878C9.126,14.724,8.733,15.116,8.251,15.116z">
+                                                    </path>
+                                                    <path fill="none"
+                                                        d="M13.972,12.386c-1.022,0-1.855,0.834-1.855,1.856s0.833,1.853,1.855,1.853s1.854-0.83,1.854-1.853S14.994,12.386,13.972,12.386z M13.972,15.116c-0.484,0-0.878-0.393-0.878-0.874c0-0.484,0.394-0.878,0.878-0.878c0.482,0,0.875,0.394,0.875,0.878C14.847,14.724,14.454,15.116,13.972,15.116z">
+                                                    </path>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- /.navbar-collapse .collapse -->
+                            </div>
+                            <!-- /.row -->
+                        </div>
+                        <!-- /.bottom-layout -->
+                    </div>
+                    <!-- /.header-layout -->
+                </div>
+                <!-- /.container -->
+        </nav>
+
+        <div class="popup-container d-none flex-row flex-c-m pos-fixed w-100 h-100 top-0 left-0">
+            <div class="auth-window d-none pos-fixed top-0">
+                <div class="limiter">
+                    <div class="container-login100">
+                        <div class="wrap-login100 checkout-style-1 p-l-55 p-r-55 p-t-65 p-b-50">
+                            <form class="login100-form validate-form">
+                                <span class="login100-form-title p-b-20">
+                                    Вхід
+                                </span>
+
+                                <div class="wrap-input100 validate-input" data-validate="Неверный E-mail">
+                                    <input class="input100" type="text" id="userEmail" name="email"
+                                        placeholder="E-mail">
+                                    <span class="focus-input100-1"></span>
+                                    <span class="focus-input100-2"></span>
+                                </div>
+
+                                <div class="wrap-input100 rs1 validate-input" data-validate="Пароль обязателен">
+                                    <input class="input100" type="password" id="userPassword" name="pass"
+                                        placeholder="Пароль">
+                                    <span class="focus-input100-1"></span>
+                                    <span class="focus-input100-2"></span>
+                                </div>
+
+                                <div class="container-login100-form-btn m-t-25">
+                                    <button class="login100-form-btn">
+                                        Увійти
+                                    </button>
+                                </div>
+
+                                <div class="footer-text text-center m-t-20">
+                                    <span class="txt1">
+                                        Створити акаунт?
+                                    </span>
+
+                                    <a href="#" class="sign-up-link txt2 hov1">
+                                        Зареєструватись
+                                    </a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.auth-window -->
+
+            <div class="fat-menu-window d-none pos-fixed top-0">
+                <div class="limiter">
+                    <div class="wrap-menu checkout-style-1 p-l-55 p-r-55 p-t-65 p-b-50">
+                        <div class="fat-menu">
+
+                        </div>
+                        <!-- /.fat-menu -->
+                    </div>
+                </div>
+            </div>
+            <!-- /.fat-menu-window -->
+
+            <div class="shopping-cart-window d-none pos-fixed top-0">
+                <div class="limiter">
+                    <div class="wrap-menu checkout-style-1 p-l-55 p-r-55 p-t-65 p-b-50">
+
+                    </div>
+                </div>
+            </div>
+            <!-- /.product-cart-window -->
+
+            <div class="about-info-window d-none pos-fixed top-0">
+                <div class="limiter">
+                    <div class="wrap-menu p-l-55 p-r-55 p-t-65 p-b-50">
+
+                    </div>
+                </div>
+            </div>
+            <!-- /.about-info-window -->
+        </div>
+        <!-- /.popup-container -->
+    </header>
+
+    <main>
+        <div class="wrapper bg-f3 d-flex step-header align-items-stretch">
+            <aside>
+
+            </aside>
+
+            <!-- Page Content  -->
+            <section id="content" class="container-fluid">
+
+            </section>
+        </div>
+    </main>
+
+
+    <script src="/common/static/utils/vendor/d3js/d3@7.js"></script>
+    <script async src="/common/static/utils/vendor/jquery/jquery-3.2.1.min.js"></script>
+    <script async src="/common/static/utils/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script async src="js/tooltips.js"></script>
+
+    <script type="module" src="/common/static/js/headerScripts.mjs"></script>
+    <script type="module" src="js/main.mjs"></script>
+</body>
+
+</html>

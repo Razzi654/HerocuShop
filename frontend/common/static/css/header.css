@@ -1,0 +1,161 @@
+:root {
+    --header-height: 7.6rem;
+    --height-100: calc(100vh - var(--header-height));
+}
+
+.step-header {
+    padding-top: var(--header-height);
+}
+
+.height-100 {
+    height: var(--height-100);
+}
+
+.min-height-100 {
+    min-height: 100vh;
+}
+
+.header-layout {
+    font-size: 11pt;
+}
+
+.header-division {
+    background: #fff;
+    border-color: #fff;
+    width: 100%;
+    margin: 0.4rem 0 0.15rem 0;
+    padding: 0;
+    color: #fff;
+}
+
+.simple-contact-info {
+    color: #fff;
+    font-size: 0.75rem;
+}
+
+header .navbar {
+    background-color: #13161a;
+    margin: 0;
+    padding-top: 8px;
+    padding-bottom: 5px;
+    z-index: 99999;
+}
+
+.header-logo {
+    margin-right: 1.55rem;
+}
+
+.fat-menu-btn {
+    border-radius: 4px;
+    height: 40px;
+    width: 100%;
+    min-width: 60px;
+    max-width: 110px;
+    background-color: #4e4c4c;
+    border: none;
+    padding: 0 0.75rem;
+}
+
+.fat-menu-btn #grid {
+    fill: #fff;
+    width: 16px;
+    height: 16px;
+}
+
+.fat-menu-window,
+.shopping-cart-window,
+.about-info-window {
+    min-height: 100vh;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background: transparent;
+    width: 100%;
+}
+
+.wrap-menu {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    min-height: 37rem;
+    width: 100%;
+    height: 100%;
+
+    box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+    -o-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+    -ms-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+}
+
+.empty-cart-text {
+    font-size: 1.3rem;
+    margin-top: 0;
+    margin-bottom: 0.35rem;
+}
+
+.empty-cart-text-small {
+    font-size: 0.85rem;
+}
+
+
+.search-area {
+    margin: 0 1rem;
+    height: 40px;
+}
+
+.search-area .search-field {
+    height: 40px;
+}
+
+.search-btn {
+    margin-left: 0.75rem;
+    font-size: 0.85rem;
+    height: 100%;
+}
+
+.account-item {
+    margin-right: 0.1rem;
+}
+
+.svg-header-icon {
+    width: 1.9em;
+    height: 1.9em;
+}
+
+.svg-header-icon path,
+.svg-header-icon polygon,
+.svg-header-icon rect {
+    fill: #fff;
+}
+
+.svg-header-icon circle {
+    stroke: #fff;
+    stroke-width: 1;
+}
+
+.popup-container {
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, .55);
+}
+
+.auth-window {
+    width: 50rem;
+    height: 45rem;
+    z-index: 99999;
+}
+
+.limiter {
+    animation: actionsShowing .5s;
+    width: 75%;
+    margin: 0 auto;
+    height: 80vh;
+    position: relative;
+    top: 2.5rem;
+}
