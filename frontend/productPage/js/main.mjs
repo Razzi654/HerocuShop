@@ -44,6 +44,8 @@ const buildProductPage = (data) => {
   const section = d3.select("main section");
   const container = section.append("div").classed("container", true);
 
+  section.style("margin-top", `${utils.getElementHeight(d3.select("header nav"))}px`);
+
   const userPlaceholderImg = "/common/static/img/Portrait_Placeholder.png";
 
   const clearContainer = () => container.selectChildren(":not(.page-title-block)").remove();
@@ -250,7 +252,7 @@ const buildProductPage = (data) => {
             const sub = quantitySelect.append("button").classed("sub", true).attr("id", "sub");
             sub.append("i").classed("fa fa-minus", true).attr("aria-hidden", "true");
 
-            const quantity = quantitySelect.append("input").attr("type", "text").attr("value", 1);
+            const quantity = quantitySelect.append("input").attr("type", "text").attr("id", "product-quantity").attr("value", 1);
 
             const add = quantitySelect.append("button").classed("add", true).attr("id", "add");
             add.append("i").classed("fa fa-plus", true).attr("aria-hidden", "true");
@@ -296,15 +298,16 @@ const buildProductPage = (data) => {
             .classed("main-btn secondary-1-btn", true)
             .style("background-color", "#bd476d")
             .on("click", () => {
-              console.log(data);
               const { _id: productID, Name, Price, Photo } = data;
 
                 const shoppingCart = utils.ShoppingCart.get() || [];
                 const productFound = shoppingCart.some(item => item.id === productID);
 
+                const quantity = parseInt(detailsContent.select("#product-quantity").property("value"));
+
                 shoppingCart.forEach(item => {
                     if (item.id === productID) {
-                        item.itemsAmount++;
+                        item.itemsAmount+=quantity;
                     }
                 });
 
@@ -314,7 +317,7 @@ const buildProductPage = (data) => {
                         name: Name,
                         price: Price,
                         img: Photo[0],
-                        itemsAmount: 1
+                        itemsAmount: quantity
                     });
                 }
 

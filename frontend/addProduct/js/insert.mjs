@@ -77,7 +77,6 @@ import * as utils from "../../common/static/js/utilFunctions.mjs";
 
             const productImgInput = d3.select("#product-img");
             productImgInput.on("input", () => {
-                console.log(productImgInput.node().files);
                 product[productImgField] = productImgPath + productImgInput.node().files[0].name;
             });
 
@@ -105,8 +104,6 @@ import * as utils from "../../common/static/js/utilFunctions.mjs";
                     body: JSON.stringify(product),
                     headers: { "Content-type": "application/json;charset=utf-8" }
                 }
-
-                console.log(product);
 
                 fetch(url, fetchData)
                     .then(response => response.json())

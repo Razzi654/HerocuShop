@@ -200,13 +200,18 @@ document.addEventListener("DOMContentLoaded", function (event) {
                 };
 
                 const addBanner = () => {
-                    carouselItem
+                    const banner = carouselItem
                         .append("div")
-                        .classed("banner", true)
+                        .classed("banner", true);
+
+                    const img = banner
                         .append("img")
                         .attr("src", banner => `/common/static/img/banners/${banner}`)
                         .attr("loading", "lazy")
                         .style("height", "100%");
+
+                    banner.style("height", `${utils.getElementWidth(carouselItem) / 3}px`);
+                    carouselItem.style("height", `${utils.getElementWidth(carouselItem) / 3}px`);
                 };
 
                 const addCarouselIndicator = () => {
@@ -597,12 +602,15 @@ document.addEventListener("DOMContentLoaded", function (event) {
         const title = wrapMenu.append("h2").classed("mb-5", true);
         const contactStyle = wrapMenu.append("div");
 
-        contactStyle.style("font-size", "1.15rem")
+        // contactStyle.style("font-size", "1.15rem")
         
         if (shownWindow.aboutUs) {
             limiter.style("height", "60vh");
             wrapMenu.style("min-height", "24rem");
-            contactStyle.classed("contact-style-2 row row-cols-2", true);
+            contactStyle
+                .classed("contact-style-2 about-us row row-cols-2", true)
+                .style("max-height", "21rem")
+                .style("overflow-y", "auto");
 
             title.text(pageNames.aboutUs.title);
 
@@ -629,8 +637,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
         } else if (shownWindow.contacts) {
             title.text(pageNames.contacts.title);
             limiter.style("height", "60vh");
-            wrapMenu.style("min-height", "24rem");
-            contactStyle.classed("contact-style-2", true);
+            wrapMenu.style("min-height", "34rem");
+            contactStyle.classed("contacts contact-style-2", true);
             
             const contactInfo = contactStyle.append("ul").classed("contact-info", true);
 

@@ -82,24 +82,14 @@ a {
 }
 
 
-
-
-@media screen and (min-width: 768px) {
-    aside {
-        width: var(--big-nav-width);
+@media screen and (min-width: 450px) {
+    .profile-body .profile-title .title {
+        font-size: 0.9rem;
     }
+}
 
-    /* .bg-container {
-        min-width: calc(100vw - var(--big-nav-width));
-    } */
-
-    .l-navbar {
-        left: 0;
-        padding: 1rem 1rem 0 0;
-        width: var(--big-nav-width);
-    }
-
-    .hide {
-        width: var(--nav-width);
+@media screen and (min-width: 200px) {
+    .profile-body .profile-title .title {
+        font-size: 0.75rem;
     }
 }

@@ -52,6 +52,7 @@ const pageNames = {
     'use strict'
 
     const pageHeader = d3.select("header nav");
+    const pageWrapper = d3.select("div.wrapper");
     const aside = d3.select("aside");
     const contentSection = d3.select("#content");
     const root = contentSection.append("div").classed("p-5", true);
@@ -200,22 +201,20 @@ const pageNames = {
 
                 const detailsItem = () => {
                     const detailsItem = utils.createSelection(profileDetails, fields, "div", ":not(.submit-row)")
-                        .classed("row single-details-item flex-row flex-l-m", true);
+                        .classed("single-details-item flex-row flex-l-m", true);
+                        
+                    const row = detailsItem
+                        .append("div")
+                        .classed("row flex-row flex-l-m", true);
 
                     const detailsTitle = () => {
-                        const detailsTitle = detailsItem.append("div").classed("details-title col-lg-2", true).style("max-width", "13rem");
+                        const detailsTitle = row.append("div").classed("details-title col-lg-2", true).style("max-width", "10rem");
                         detailsTitle.append("h6").classed("title", true).text(field => `${field.displayName}:`);
                     };
 
                     const detailsContent = () => {
-                        const detailsContent = detailsItem.append("div").classed("col-lg-10 details-content media-body has-validation", true);
-                        
+                        const detailsContent = row.append("div").classed("col-lg-10 details-content media-body has-validation", true);
                         buildInput(detailsContent)
-                            .on("input", (event) => {
-                                // TODO:
-                                // profileDetails.node().checkValidity();
-                                // profileDetails.classed("was-validated", true);
-                            });
                     };
 
                     detailsTitle();
@@ -364,7 +363,7 @@ const pageNames = {
                 });
 
                 detailsContent.nodes().forEach(node => {
-                    const detailsItem = d3.select(node.parentElement);
+                    const detailsItem = d3.select(node.parentElement.parentElement);
                     detailsItem
                         .append("div")
                         .classed("col-lg-1 delete-action", true)
@@ -483,7 +482,8 @@ const pageNames = {
                     .append("li")
                     .classed("active", isActive)
                     .attr("name", name)
-                    .style("cursor", "pointer");
+                    .style("cursor", "pointer")
+                    .style("position", "relative");
 
                 const a = li.append("a");
 
@@ -563,6 +563,8 @@ const pageNames = {
     document.addEventListener("DOMContentLoaded", function () {
         utils.getProfileData().then(data => {
             if (data.isAuth) {
+                pageWrapper.style("margin-top", `${utils.getElementHeight(pageHeader)}px`)
+
                 const orderList = orderListSection(data.orderList);
                 const profile = profileSection(data.personalData);
 

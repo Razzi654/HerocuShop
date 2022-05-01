@@ -1,5 +1,5 @@
 :root {
-    --header-height: 7.6rem;
+    --header-height: 11rem;
     --height-100: calc(100vh - var(--header-height));
 }
 
@@ -158,4 +158,17 @@ header .navbar {
     height: 80vh;
     position: relative;
     top: 2.5rem;
+}
+
+
+@media (min-width: 1000px) {
+    .limiter .wrap-menu .about-us {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .limiter .wrap-menu .about-us {
+        font-size: 0.9rem;
+    }
 }

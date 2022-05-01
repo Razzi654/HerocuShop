@@ -100,6 +100,11 @@ const sectionsName = ["AllProducts", "Ноутбуки", "Смартфони", "
         const productSections = utils.createSelection(body, data, "div", ".product-section").classed("product-section", true);
 
 
+        const carouselId = "#myCarousel";
+        const main = d3.select("main");
+        const carousel = main.select(carouselId);
+        carousel.style("margin-top", `${utils.getElementHeight(d3.select("header nav"))}px`)
+
 
         const sectionTitleBlock = productSections.append("div").classed("row row-cols-1 row-cols-sm-2 g-3", true);
 
