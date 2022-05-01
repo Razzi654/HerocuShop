@@ -203,11 +203,6 @@ header .navbar {
     }
 }
 
-
-
-
-
-
 @media (min-width: 658px) {
     .limiter .wrap-login100 {
         padding: 3rem;
@@ -215,14 +210,14 @@ header .navbar {
     }
 }
 
-@media (min-width: 443px) {
+@media (max-width: 657px) {
     .limiter .wrap-login100 {
         padding: 3rem;
         width: 55%;
     }
 }
 
-@media (min-width: 442px) {
+@media (max-width: 442px) {
     .limiter .wrap-login100 {
         padding: 2rem;
         width: 35%;
