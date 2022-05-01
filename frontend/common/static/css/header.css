@@ -161,12 +161,17 @@ header .navbar {
     top: 2.5rem;
 }
 
-@media (min-width: 1200px) {
-    .limiter .wrap-menu {
-        padding: 8rem;
+@media (min-width: 1300px) {
+    .limiter {
+        width: 80%;
     }
 }
 
+@media (min-width: 1200px) {
+    .limiter {
+        width: 85%;
+    }
+}
 
 @media (min-width: 1101px) {
     .limiter .wrap-menu .about-us {
@@ -174,11 +179,11 @@ header .navbar {
     }
 
     .limiter .wrap-menu {
-        padding: 5rem;
+        padding: 4rem;
     }
 
     .limiter {
-        width: 75%;
+        width: 95%;
     }
 }
 
