@@ -319,7 +319,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
         const shoppingCart = root
             .append("div")
             .classed("shopping-cart table-responsive", true)
-            .style("height", "70%")
             .style("overflow", "hidden")
             .style("min-width", "51rem");
 
