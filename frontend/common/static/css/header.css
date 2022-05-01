@@ -161,10 +161,34 @@ header .navbar {
     top: 2.5rem;
 }
 
+@media (min-width: 1200px) {
+    .limiter .wrap-menu {
+        padding: 8rem;
+    }
+}
+
 
 @media (min-width: 1000px) {
     .limiter .wrap-menu .about-us {
         font-size: 1.1rem;
+    }
+
+    .limiter .wrap-menu {
+        padding: 5rem;
+    }
+
+    .limiter {
+        width: 75%;
+    }
+}
+
+@media (max-width: 999px) {
+    .limiter {
+        width: 100%;
+    }
+
+    .limiter .wrap-menu {
+        padding: 1rem;
     }
 }
 

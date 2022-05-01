@@ -20,6 +20,10 @@ section {
     background-color: #f2f6fb;
 }
 
+.carousel-item {
+    max-height: 30rem;
+}
+
 .carousel-item .banner {
     position : absolute;
     top      : 0;
