@@ -148,10 +148,6 @@ routes.post('/addProduct', async (req, res) => {
                     })
                     let productURL = generateProductDirectory(product.secID, subsection._id, product._id)
 
-                    console.log("subsection.secID", subsection.secID);
-                    console.log("subsection._id", subsection._id);
-                    console.log("productURL", product._id);
-
                     fs.mkdir(productURL, err => {
                         if (err)
                             throw err;
@@ -163,6 +159,7 @@ routes.post('/addProduct', async (req, res) => {
                             product.Photo.push(productURL + '/' + file.name)
                         })
                     } else if (req.files && req.files.productImg) {
+                        file.mv(productURL + '/' + req.files.productImg.name);
                         product.Photo.push(productURL + '/' + req.files.productImg.name)
                     }
 
