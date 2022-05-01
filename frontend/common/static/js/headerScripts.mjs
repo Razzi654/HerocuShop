@@ -318,8 +318,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
         const shoppingCart = root
             .append("div")
-            .classed("shopping-cart", true)
-            .style("height", "70%");
+            .classed("shopping-cart table-responsive", true)
+            .style("height", "70%")
+            .style("overflow", "hidden")
+            .style("min-width", "61rem");
 
         const emptyCart = () => {
             shoppingCart.classed("flex-col flex-sa-m", true);
@@ -388,7 +390,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
                     .style("max-height", "100%")
                     .style("overflow-y", "auto");
 
-                const checkoutTable = tableWrapper.append("div").classed("checkout-table table-responsive", true);
+                const checkoutTable = tableWrapper.append("div").classed("checkout-table", true);
                 const table = checkoutTable.append("table").classed("table", true);
 
                 const { columns } = pageNames.shoppingCart;
