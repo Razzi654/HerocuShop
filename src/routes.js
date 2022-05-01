@@ -44,13 +44,13 @@ function checkAccessToken(accessToken, method) {
 function generateProductDirectory(sectionName, subsectionName, productName) {
     let directoryUrl;
     if (sectionName && !subsectionName && !productName) {
-        directoryUrl = 'frontend/source/sections/' + sectionName
+        directoryUrl = `frontend/source/sections/${sectionName}`
     }
     if (sectionName && subsectionName && !productName) {
-        directoryUrl = 'frontend/source/sections/' + sectionName + '/' + subsectionName
+        directoryUrl = `frontend/source/sections/${sectionName}/${subsectionName}`
     }
     if (sectionName && subsectionName && productName) {
-        directoryUrl = 'frontend/source/sections/' + sectionName + '/' + subsectionName+ '/' + productName
+        directoryUrl = `frontend/source/sections/${sectionName}/${subsectionName}/${productName}`
     }
     return directoryUrl
 }
