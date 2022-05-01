@@ -161,6 +161,7 @@ routes.post('/addProduct', async (req, res) => {
                         })
                     } else if (req.files && req.files.productImg) {
                         product.Photo.push(productURL + '/' + req.files.productImg.name)
+                        console.log(req.files.productImg);
                     }
 
                     
