@@ -390,7 +390,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
                     .style("max-height", "100%")
                     .style("overflow-y", "auto");
 
-                const checkoutTable = tableWrapper.append("div").classed("checkout-table", true);
+                const checkoutTable = tableWrapper.append("div").classed("checkout-table", true).style("max-height", "40rem");
                 const table = checkoutTable.append("table").classed("table", true);
 
                 const { columns } = pageNames.shoppingCart;
