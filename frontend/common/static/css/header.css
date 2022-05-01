@@ -168,7 +168,7 @@ header .navbar {
 }
 
 
-@media (min-width: 1000px) {
+@media (min-width: 1101px) {
     .limiter .wrap-menu .about-us {
         font-size: 1.1rem;
     }
@@ -182,7 +182,7 @@ header .navbar {
     }
 }
 
-@media (max-width: 999px) {
+@media (max-width: 1100px) {
     .limiter {
         width: 100%;
     }
