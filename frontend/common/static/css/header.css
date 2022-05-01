@@ -202,3 +202,29 @@ header .navbar {
         font-size: 0.9rem;
     }
 }
+
+
+
+
+
+
+@media (min-width: 658px) {
+    .limiter .wrap-login100 {
+        padding: 3rem;
+        width: 75%;
+    }
+}
+
+@media (min-width: 443px) {
+    .limiter .wrap-login100 {
+        padding: 3rem;
+        width: 55%;
+    }
+}
+
+@media (min-width: 442px) {
+    .limiter .wrap-login100 {
+        padding: 2rem;
+        width: 35%;
+    }
+}
