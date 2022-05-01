@@ -201,19 +201,19 @@ const pageNames = {
 
                 const detailsItem = () => {
                     const detailsItem = utils.createSelection(profileDetails, fields, "div", ":not(.submit-row)")
-                        .classed("single-details-item flex-row flex-l-m", true);
+                        .classed("single-details-item", true);
                         
                     const row = detailsItem
                         .append("div")
                         .classed("row flex-row flex-l-m", true);
 
                     const detailsTitle = () => {
-                        const detailsTitle = row.append("div").classed("details-title col-lg-2", true).style("max-width", "10rem");
+                        const detailsTitle = row.append("div").classed("details-title col-12 col-lg-2", true).style("max-width", "10rem");
                         detailsTitle.append("h6").classed("title", true).text(field => `${field.displayName}:`);
                     };
 
                     const detailsContent = () => {
-                        const detailsContent = row.append("div").classed("col-lg-10 details-content media-body has-validation", true);
+                        const detailsContent = row.append("div").classed("col-12 col-lg-10 details-content media-body has-validation", true);
                         buildInput(detailsContent)
                     };
 
