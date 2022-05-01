@@ -47,7 +47,6 @@ function generateProductDirectory(sectionName, subsectionName, productName) {
         directoryUrl = 'frontend/source/sections/' + sectionName
     }
     if (sectionName && subsectionName && !productName) {
-        subsectionName = subsectionName.replace("'", "");
         directoryUrl = 'frontend/source/sections/' + sectionName + '/' + subsectionName
     }
     if (sectionName && subsectionName && productName) {
@@ -115,7 +114,7 @@ routes.post('/addProduct', async (req, res) => {
                 if (!await Section.findOne({ Name: dataFromInsert.sectionName })) {
                     let section = new Section({ Name: dataFromInsert.sectionName })
                     await section.save()
-                    fs.mkdir(generateProductDirectory(section.Name), err => {
+                    fs.mkdir(generateProductDirectory(section._id), err => {
                         if (err)
                             throw err;
                     })
@@ -124,7 +123,7 @@ routes.post('/addProduct', async (req, res) => {
                     let section = await Section.findOne({ Name: dataFromInsert.sectionName })
                     let subsection = new Subsection({ Name: dataFromInsert.subsectionName, sectionName: dataFromInsert.sectionName, sectionID: section._id, Photo: 'PhotoURL' })
                     await subsection.save()
-                    fs.mkdir(generateProductDirectory(subsection.sectionName, subsection.Name), err => {
+                    fs.mkdir(generateProductDirectory(subsection._id, subsection._id), err => {
                         if (err)
                             throw err;
                     })
@@ -147,7 +146,7 @@ routes.post('/addProduct', async (req, res) => {
                         Price: parseInt(dataFromInsert.productPrice),
                         DateOfReceipt: date,
                     })
-                    let productURL = generateProductDirectory(subsection.sectionName, subsection.Name, product._id)
+                    let productURL = generateProductDirectory(subsection._id, subsection._id, product._id)
 
                     fs.mkdir(productURL, err => {
                         if (err)
@@ -161,7 +160,6 @@ routes.post('/addProduct', async (req, res) => {
                         })
                     } else if (req.files && req.files.productImg) {
                         product.Photo.push(productURL + '/' + req.files.productImg.name)
-                        console.log(req.files.productImg);
                     }
 
                     
