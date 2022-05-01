@@ -146,7 +146,11 @@ routes.post('/addProduct', async (req, res) => {
                         Price: parseInt(dataFromInsert.productPrice),
                         DateOfReceipt: date,
                     })
-                    let productURL = generateProductDirectory(subsection.secID, subsection._id, product._id)
+                    let productURL = generateProductDirectory(product.secID, subsection._id, product._id)
+
+                    console.log("subsection.secID", subsection.secID);
+                    console.log("subsection._id", subsection._id);
+                    console.log("productURL", product._id);
 
                     fs.mkdir(productURL, err => {
                         if (err)
