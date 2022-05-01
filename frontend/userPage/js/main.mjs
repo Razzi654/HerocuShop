@@ -399,6 +399,8 @@ const pageNames = {
                         });
                 });
 
+                form.select(".single-details-item:not(:.submit-row)").classed("single-details-item flex-c-m", true);
+
 
                 return input;
             };
