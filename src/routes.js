@@ -153,10 +153,17 @@ routes.post('/addProduct', async (req, res) => {
                         if (err)
                             throw err;
                     })
-                    req.files.productImg.forEach(file => {
-                        file.mv(productURL + '/' + file.name);
-                        product.Photo.push(productURL + '/' + file.name)
-                    })
+
+                    if (Array.isArray(req.files.productImg)) {
+                        req.files.productImg.forEach(file => {
+                            file.mv(productURL + '/' + file.name);
+                            product.Photo.push(productURL + '/' + file.name)
+                        })
+                    } else if (req.files && req.files.productImg) {
+                        product.Photo.push(productURL + '/' + req.files.productImg.name)
+                    }
+
+                    
                     await Subsection.updateOne({Name: dataFromInsert.subsectionName},{$set:{Photo:product.Photo[0]}})
                     await product.save()
                 }
