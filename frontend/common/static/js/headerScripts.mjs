@@ -321,7 +321,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
             .classed("shopping-cart table-responsive", true)
             .style("height", "70%")
             .style("overflow", "hidden")
-            .style("min-width", "61rem");
+            .style("min-width", "51rem");
 
         const emptyCart = () => {
             shoppingCart.classed("flex-col flex-sa-m", true);
@@ -411,7 +411,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
                             switch (column) {
                                 case columns.at(0):
                                     const productCart = d3.create("div").classed("product-cart row d-flex", true);
-                                    const productThumb = productCart.append("div").classed("product-thumb col-1 flex-c", true);
+                                    const productThumb = productCart.append("div").classed("product-thumb col-2 flex-c", true);
                                     productThumb.append("img").attr("src", utils.correctImgPath(product.img));
 
                                     const productContent = productCart.append("div").classed("product-content col-auto media-body flex-col-l-m", true);

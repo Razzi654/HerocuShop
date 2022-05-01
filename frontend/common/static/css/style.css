@@ -20296,7 +20296,7 @@ only screen and (min-width: 992px) and (max-width: 1199px) {
 
 .checkout-style-1 .checkout-table .table {
   margin-bottom: 0;
-  min-width: 60rem;
+  min-width: 50rem;
 }
 
 .checkout-style-1 .checkout-table .table thead tr th {
