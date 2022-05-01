@@ -159,7 +159,7 @@ routes.post('/addProduct', async (req, res) => {
                             product.Photo.push(productURL + '/' + file.name)
                         })
                     } else if (req.files && req.files.productImg) {
-                        file.mv(productURL + '/' + req.files.productImg.name);
+                        req.files.productImg.mv(productURL + '/' + req.files.productImg.name);
                         product.Photo.push(productURL + '/' + req.files.productImg.name)
                     }
 
