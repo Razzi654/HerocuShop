@@ -524,7 +524,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
             const checkoutButtons = () => {
                 const checkoutBtn = shoppingCart
                     .append("div")
-                    .classed("checkout-btn d-sm-flex justify-content-between", true);
+                    .classed("checkout-btn d-flex justify-content-between", true);
 
                 const singleBtn = (text, primary = false) => {
                     checkoutBtn
