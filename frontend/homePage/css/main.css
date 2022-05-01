@@ -24,6 +24,10 @@ section {
     max-height: 30rem;
 }
 
+.carousel-item .banner{
+    max-height: 30rem;
+}
+
 .carousel-item .banner {
     position : absolute;
     top      : 0;
