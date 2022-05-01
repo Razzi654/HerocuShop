@@ -603,27 +603,25 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
         const title = wrapMenu.append("h2").classed("mb-5", true);
         const contactStyle = wrapMenu.append("div");
-
-        // contactStyle.style("font-size", "1.15rem")
         
         if (shownWindow.aboutUs) {
             limiter.style("height", "60vh");
             wrapMenu.style("min-height", "24rem");
             contactStyle
-                .classed("contact-style-2 about-us row row-cols-2", true)
-                .style("max-height", "21rem")
+                .classed("contact-style-2 about-us row row-cols-1 row-cols-sm-2", true)
+                // .style("max-height", "21rem")
                 .style("overflow-y", "auto");
 
             title.text(pageNames.aboutUs.title);
 
             contactStyle.append("div")
-                .classed("lh-lg mb-3 col-6", true)
+                .classed("lh-lg mb-3 col-12 col-sm-6", true)
                 .text(`
                 Ми є одним з лідерів ринку з продажу цифрової та побутової техніки. Наша мета змінити життя людей, 
                 зробивши простим доступ до величезної кількості якісних та недорогих товарів, надаючи найкращий сервіс.
             `);
             contactStyle.append("div")
-                .classed("lh-lg col-6", true)
+                .classed("lh-lg col-12 col-sm-6", true)
                 .text(`
                 Наші клієнти – у центрі всього, що ми робимо, довіра – головне. Ми будуємо довгострокові відносини,
                 У всьому, чим займаємось, прагнемо бути експертами, відкриті для пропозицій та покращень.
@@ -631,6 +629,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
             contactStyle.append("div")
                 .classed("lh-lg mb-1 col-12", true)
+                .style("margin-top", "0.5rem")
                 .text(`
                 Навколо нас люди, з якими приємно працювати та досягати амбітних цілей, ми намагаємось наймати однодумців.
             `);
