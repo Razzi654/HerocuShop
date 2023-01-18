@@ -1,12 +1,12 @@
 import * as utils from "../../common/static/js/utilFunctions.mjs";
 
 const sortName = {
-    MostPopularDesc: "Найпопулярніші",
-    MostPopularAsc: "Найнепопулярніші",
-    ByPriceDesc: "Від дорогих до дешевих",
-    ByPriceAsc: "Від дешевих до дорогих",
-    ByRatingDesc: "Високі оцінки",
-    ByRatingAsc: "Низькі оцінки",
+    MostPopularDesc: "Наиболее популярные",
+    MostPopularAsc: "Наименее популярные",
+    ByPriceDesc: "От дорогих к дешевым",
+    ByPriceAsc: "От дешевых к дорогим",
+    ByRatingDesc: "Високие оценки",
+    ByRatingAsc: "Низкие оценки",
 };
 
 let sectionsRequirement = ["NewArrivals", "ByPrice", "MostPopular", "MostPopular", "MostPopular"];
@@ -18,7 +18,7 @@ const sectionsName = ["AllProducts", "Ноутбуки", "Смартфони", "
     const lowAmountColor = "#bb6308";
     const productCount = 10;
     const lowAmountTrashold = 10;
-    const allproductsReplace = { "AllProducts": "Нові надходження" };
+    const allproductsReplace = { "AllProducts": "Новые поступления" };
 
     /**
      * 
@@ -53,7 +53,7 @@ const sectionsName = ["AllProducts", "Ноутбуки", "Смартфони", "
     const getAvailabilityText = (product) => {
         return lowAmount(product)
             ? "Закінчується"
-            : available(product) ? "Є в наявності" : "Немає в наявності"
+            : available(product) ? "В наличии" : "Нет в наличии"
     };
 
     /**

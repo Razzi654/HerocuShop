@@ -1,27 +1,27 @@
 import * as utils from "../../common/static/js/utilFunctions.mjs";
 
 const sortName = {
-  DateDesc: "Від нових до старих",
-  DateAsc: "Від старих до нових",
-  ScoreDesc: "Високі оцінки",
-  ScoreAsc: "Низькі оцінки",
+  DateDesc: "От новых до старых",
+  DateAsc:  "От старых до новых",
+  ScoreDesc: "Высокие оценки",
+  ScoreAsc: "Низкие оценки",
 };
 
 const pageNames = {
-  reviewsCount: "Відгуків",
-  reviews: "Відгуки",
-  menuItems: ["Огляд", "Відгуки"],
-  specefications: "Короткі характеристики",
-  quantity: "Кількість",
-  price: "Ціна",
-  buy: "Придбати",
-  expand: "Розгорнути",
-  collapse: "Згорнути",
-  description: "Опис",
+  reviewsCount: "Отзывов",
+  reviews: "Отзывы",
+  menuItems: ["Обзор", "Отзывы"],
+  specefications: "Краткие характеристики",
+  quantity: "Количество",
+  price: "Цена",
+  buy: "Купить",
+  expand: "Развернуть",
+  collapse: "Свернуть",
+  description: "Описание",
   specifications: "Характеристики",
-  ratingStarTitle: "Натисніть на зірку, щоб поставити оцінку",
-  reviewTitle: "Напишіть свій відгук",
-  saveReviewBtn: "Зберегти відгук",
+  ratingStarTitle: "Нажмите на звезду, чтобы поставить оценку товару",
+  reviewTitle: "Напишите свой отзыв",
+  saveReviewBtn: "Отправить отзыв",
 }
 
 /**

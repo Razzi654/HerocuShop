@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ua">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
@@ -9,41 +9,41 @@
     <!-- Bootstrap CSS -->
     <link href="/common/static/utils/vendor/bootstrap/bootstrap.min.css" rel="stylesheet">
 
-    <title>Додати</title>
+    <title>Добавление товара</title>
 </head>
 
 <body>
-    <h2>Додати товар</h2>
+    <h2>Добавить товар</h2>
     <form id="add-product" action="/addProduct" method="POST" enctype="multipart/form-data">
         <div class="input-group mb-3">
-            <label for="product-name" class="input-group-text">Назва товару</label>
-            <input type="text" class="form-control" id="product-name" placeholder="Назва товару" required>
+            <label for="product-name" class="input-group-text">Название товара</label>
+            <input type="text" class="form-control" id="product-name" placeholder="Название товара" required>
         </div>
 
         <div class="input-group mb-3">
-            <label for="product-descr" class="input-group-text">Опис товару</label>
-            <input type="text" class="form-control" id="product-descr" placeholder="Опис товару" required>
+            <label for="product-descr" class="input-group-text">Описание товара</label>
+            <input type="text" class="form-control" id="product-descr" placeholder="Описание товара" required>
         </div>
 
         <div class="input-group mb-3">
-            <label for="product-amount" class="input-group-text">Кількість товару</label>
-            <input type="text" class="form-control" id="product-amount" placeholder="Кількість товару" required>
+            <label for="product-amount" class="input-group-text">Количество товара</label>
+            <input type="text" class="form-control" id="product-amount" placeholder="Количество товара" required>
         </div>
 
         <div class="input-group mb-3">
-            <label for="product-price" class="input-group-text">Ціна товару</label>
-            <input type="text" class="form-control" id="product-price" placeholder="Ціна товару" required>
+            <label for="product-price" class="input-group-text">Цена товара</label>
+            <input type="text" class="form-control" id="product-price" placeholder="Цена товара" required>
         </div>
 
         <div class="input-group mb-3">
             <datalist id="section-names"></datalist>
             <datalist id="subsection-names"></datalist>
 
-            <label for="select-section" class="input-group-text">Розділ товару</label>
+            <label for="select-section" class="input-group-text">Раздел товара</label>
             <input type="text" id="select-section"  autocomplete="off" class="form-control" required>
             </input>
 
-            <label for="select-subsection" class="input-group-text">Підрозділ товару</label>
+            <label for="select-subsection" class="input-group-text">Раздел товара</label>
             <input type="text" id="select-subsection"  autocomplete="off" class="form-control" required>
             </input>
         </div>
@@ -54,7 +54,7 @@
                 accept="image/*" required>
         </div>
 
-        <button id="submit-btn" type="submit" class="btn btn-success">Надіслати</button>
+        <button id="submit-btn" type="submit" class="btn btn-success">Добавить</button>
     </form>
 
 
